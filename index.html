@@ -1,1 +1,1378 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/74/34/b1/7434b124580bc55a4c9382add6b08cd8.jpg">
+    <title>Study</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0 auto;
+    gap: 0;
+    padding: 0;
+    transform: 0.5s ease-in-out;
+}
+a {
+    text-decoration: none;
+    color: #A8D5BA;
+    transform: 0.5s ease-in-out;
+}
+.topo {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem;
+    display: flex;
+    align-content: center;
+    font-size: larger;
+    text-align: center;
+}
+.topo:hover {
+    width: 2.1rem;
+    height: 2.1rem;
+}
+body {
+    font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #1B1F1D;
+    color: #D4E9D4;
+    width: 100%;
+    height: 100%;
+}
+#areas {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2A362B;
+    padding: 1rem;
+    border-color: #6FA86F;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0; 
+    padding: 0;
+}
+
+button {
+    background-color: #2E4A32;
+    color: #E8F5E9;
+    font-size: 15px;
+    border-radius: 5rem;
+    border: 2px solid #6FA86F; 
+    padding: 10px 15px; 
+    transition: 0.7s ease-in-out; 
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(141, 160, 107);
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #areas {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    ul {
+        flex-direction: column; 
+        gap: 0.5rem; 
+        width: 100%; 
+        text-align: center;
+    }
+
+    button {
+        width: max-content;
+    }
+}
+#container {
+    color: #D4E9D4;
+    padding: 1rem;
+}
+.titulo {
+    font-size: 3rem;
+    color: #D4E9D4;
+}
+img {
+    image-rendering: optimizeQuality;
+    display: flex;
+    width: 40%;
+    height: 40%;
+}
+.serie {
+    font-size: 2rem;
+    background-color: #3D3242;
+    color: #fff;
+    border-color: #fff;
+    width: 25%;
+    border-radius: 0.4rem;
+    text-align: center;
+}
+.materia {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+.cards, .cards_uece, .cards_enem, .cards_ita {
+    display: flex;
+    flex-wrap: wrap;
+    transform: 0.5s ease-in-out;
+} 
+.cards_uece {
+    background-color: #25392C;
+    transform: 0.5s ease-in-out;
+}
+.cards_enem {
+    background-color: #32263A;
+    transform: 0.5s ease-in-out;
+}
+.cards_ita {
+    background-color: #24333C;
+    transform: 0.5s ease-in-out;
+}
+.link_card {
+    text-decoration: none;
+    color: #D4E9D4;
+    transform: 0.5s ease-in-out;
+}
+.link_card:hover {
+    color: #fff;
+}
+.link_card:active {
+    color: #fff;
+}
+.card, .card_uece, .card_enem, .card_ita {
+    align-content: center;
+    text-align: center;
+    width: 10rem;
+    height: auto;
+    margin: 1rem;
+    background-color: #2E2F2E;
+    color: #fff;
+    border-radius: 2rem;
+    padding: 2rem;
+    transform: 0.5s ease-in-out;
+}
+.card_uece {
+    background-color: #465f47;
+    transform: 0.5s ease-in-out;
+}
+.card_enem {
+    background-color: #3D3242;
+    transform: 0.5s ease-in-out;
+}
+.card_ita {
+    background-color: #34444C;
+    transform: 0.5s ease-in-out;
+}
+.card:hover {
+    box-shadow: 0 0 15px 5px rgba(184, 184, 184, 0.8);
+    transform: scale(1.03);
+    transition: 1s ease-in-out;
+}
+.card_uece:hover {
+    box-shadow: 0 0 15px 5px rgba(154, 255, 154, 0.8); 
+    transform: scale(1.03);
+    transition: 1s ease-in-out;
+}
+.card_enem:hover {
+    box-shadow: 0 0 15px 5px rgba(218, 162, 255, 0.8); 
+    transform: scale(1.03);
+    transition: 1s ease-in-out;
+}
+.card_ita:hover {
+    box-shadow: 0 0 15px 5px rgba(162, 213, 255, 0.8); 
+    transform: scale(1.03);
+    transition: 1s ease-in-out;
+}
+.nome {
+    font-size: 1rem;
+    text-decoration: underline;
+    margin: 5px;
+}
+.descricao {
+    font-size: 0.8rem;
+}
+.logo {
+    width: 40%;
+    height: 27%;
+}
+.acess {
+    width: 80%;
+    height: 45%;
+    margin: 15px;
+    background-color: #3A3D3A;
+    color: #E8F5E9;
+    border-color: #6FA86F;
+    transform: 0.5s ease-in-out;
+}
+.acess:hover {
+    cursor: pointer;
+    background-color: rgb(141, 160, 107);
+    color: #fff;
+    border-color: #fff;
+    height: 15%;
+}
+.vestibular_uece, .vestibular_enem, .vestibular_ita {
+    font-size: 2rem;
+    background-color: #7CA362;
+    color: #fff;
+    text-align: center;
+    transform: 0.5s ease-in-out;
+}
+.vestibular_enem {
+    background-color: #9A7BAF;
+    transform: 0.5s ease-in-out;
+}
+.vestibular_ita {
+    background-color: #6C8FAF;
+    transform: 0.5s ease-in-out;
+}
+.secret {
+    background-color: #4c614e;
+    color: #D4E9D4;
+    display: inline-flex;
+    font-size: 0.65rem;
+    height: 1.4rem;
+    width: 1.2rem;
+    transform: 0.5s ease-in-out;
+}
+.lista_materias {
+    text-decoration: none;
+    list-style: circle;
+    display: list-item;
+    text-align: left;
+}
+.frase {
+    font-family: 'fantasy';
+    font-size: 1rem;
+}
+.mensagem {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <nav id="areas">
+        <ul>
+            <li><strong><button onclick="sel_area('home')">Início</button></strong></li>
+            <li><strong><button onclick="sel_area('materias')">Checklist</button></strong></li>
+            <li><strong><button onclick="sel_area('redacoes')">Treinar Redações</button></strong></li>
+            <li><strong><button onclick="sel_area('simulados')">Simulados</button></strong></li>
+            <li><strong><button onclick="sel_area('extra')">Materiais Extras</button></strong></li>
+        </ul>
+    </nav>
+    <main id="container">
+            <p class="titulo"><strong>Início</strong></p>
+            <p>
+                Olá! Bem vindo(a) ao Study 1.5, uma versão alternativa do Study voltado a ENEM e vestibulares especificamente.<br>
+                Aqui você encontrará um checklist de matérias, uma área para treinar redações, simulados e materiais extras que são 
+                muito úteis para estudo.
+            </p>
+            <img id="logo" src="https://i.pinimg.com/736x/74/34/b1/7434b124580bc55a4c9382add6b08cd8.jpg" alt="logo do projeto study">
+    </main>
+</body>
+<script>
+    function go_to_top() {
+        window.scrollTo({
+        top: 0,
+        behavior:"smooth"
+        })
+    }
+
+    function sel_area(area)  {
+        var navAreas = document.getElementById('areas');
+        var mainCont = document.getElementById('container');
+
+        if (area === 'home') {
+            navAreas.innerHTML = `
+            <ul>
+                <li><strong><button onclick="sel_area('home')">Início</button></strong></li>
+                <li><strong><button onclick="sel_area('materias')">Checklist</button></strong></li>
+                <li><strong><button onclick="sel_area('redacoes')">Treinar Redações</button></strong></li>
+                <li><strong><button onclick="sel_area('simulados')">Simulados</button></strong></li>
+                <li><strong><button onclick="sel_area('extra')">Materiais Extras</button></strong></li>
+            </ul>
+
+            `;
+            mainCont.innerHTML = `
+            <p class="titulo"><strong>Início</strong></p>
+            <p>
+                Olá! Bem vindo(a) ao Study-prototype, uma versão incompleta do projeto Study iniciado em 2023 com o objetivo
+                de auxiliar estudantes no estudo de diversas matérias. Clique em alguma das áreas acima para acessar uma das
+                áreas.
+            </p>
+            <a href="https://drive.google.com/file/d/1-lmvWmsODolrqOgAO1zTPRdWs9Ioisxd/view" target="_blank">
+                <button class="secret">M</button>
+            </a>
+            <img id="logo" src="https://i.pinimg.com/736x/74/34/b1/7434b124580bc55a4c9382add6b08cd8.jpg" alt="logo do projeto study">
+            `;
+        }
+        if (area === 'materias') {
+            navAreas.innerHTML = `
+            <ul>
+                <li><strong><button onclick="sel_area('home')">Início</button></strong></li>
+                <li><strong><button onclick="sel_area('materias')">Checklist</button></strong></li>
+                <li><strong><button onclick="sel_area('redacoes')">Treinar Redações</button></strong></li>
+                <li><strong><button onclick="sel_area('simulados')">Simulados</button></strong></li>
+                <li><strong><button onclick="sel_area('extra')">Materiais Extras</button></strong></li>
+            </ul>
+
+            `;
+            mainCont.innerHTML = `
+            <p class="titulo"><strong>Checklist</strong></p>
+            <p>
+                Aqui estão as séries com as matérias estudadas e os assuntos normalmente vistos em cada durante o período do
+                ensino médio:
+            </p>
+            <h2 class="serie"><strong>ENEM</strong></h2>
+            <p class="materia"><strong>Inglês</strong></p>
+            <ul class="lista_materias">
+                <li>Interpretação de Texto</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>Espanhol</strong></p>
+            <ul class="lista_materias">
+                <li>Interpretação de Texto</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>Português</strong></p>
+            <ul class="lista_materias">
+                <li>Interpretação de texto</li>
+                <li>Figuras de linguagem</li>
+                <li>Gêneros literários</li>
+                <li>Tipos textuais e gêneros textuais</li>
+                <li>Pronomes possessivos, demonstrativos, indefinidos, interrogativos e relativos</li>
+                <li>Verbos</li>
+                <li>Coesão e coerência</li>
+                <li>Estudo do período simples – sujeito e predicado</li>
+                <li>Funções da linguagem</li>
+                <li>Concordância verbal</li>
+                <li>Concordância nominal</li>
+                <li>Intertextualidade</li>
+                <li>Regência verbal</li>
+                <li>Período composto por coordenação</li>
+                <li>Pontuação</li>
+                <li>Análise sintático-semântica</li>
+                <li>Gêneros narrativos</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>Literatura</strong></p>
+            <ul class="lista_materias">
+                <li>Tenentismo</li>
+                <li>Barroco</li>
+                <li>Realismo / Naturalismo</li>
+                <li>Modernismo</li>
+                <li>Literatura contemporânea</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>Matemática</strong></p>
+            <ul class="lista_materias">
+                <li>Conjuntos numéricos</li>
+                <li>Problemas do 1° grau</li>
+                <li>Problemas do 2° grau</li>
+                <li>Razão e proporção</li>
+                <li>Porcentagem</li>
+                <li>Geometria plana</li>
+                <li>Análise combinatória</li>
+                <li>Probabilidade</li>
+                <li>Função afim (função do 1° grau)</li>
+                <li>Função quadrática (função do 2° grau)</li>
+                <li>Função exponencial</li>
+                <li>Logaritmo</li>
+                <li>Sequências numéricas</li>
+                <li>Progressões aritméticas</li>
+                <li>Progressões geométricas</li>
+                <li>Geometria analítica</li>
+                <li>Geometria espacial</li>
+                <li>Trigonometria</li>
+                <li>Estatística</li>
+                <li>Juros simples</li>
+                <li>Juros compostos</li>
+                <li>Matemática básica (multiplicação, divisão, soma, subtração, MMC, MDC, potenciação, radiciação, dízimas, frações, decimais e notação científica)</li>
+                <li>Regra de três</li>
+                <li>Escala</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>História</strong></p>
+            <ul class="lista_materias">
+                <li>Brasil pré-colonial</li>
+                <li>Colonização</li>
+                <li>União Ibérica</li>
+                <li>Expansão territorial</li>
+                <li>Ciclo do açúcar</li>
+                <li>Ciclo do ouro</li>
+                <li>Período joanino</li>
+                <li>Primeiro Reinado</li>
+                <li>Período Regencial</li>
+                <li>Segundo Reinado</li>
+                <li>República Oligárquica</li>
+                <li>Era Vargas</li>
+                <li>Populismo</li>
+                <li>Ditadura Militar</li>
+                <li>República Nova</li>
+                <li>Antiguidade Oriental</li>
+                <li>Antiguidade Clássica</li>
+                <li>Alta Idade Média</li>
+                <li>Baixa Idade Média</li>
+                <li>Expansão marítima</li>
+                <li>Renascimento cultural</li>
+                <li>Absolutismo</li>
+                <li>Revoluções Inglesas</li>
+                <li>Mercantilismo</li>
+                <li>Iluminismo</li>
+                <li>Colonização da América</li>
+                <li>Revolução Francesa</li>
+                <li>Revolução Industrial</li>
+                <li>Revoluções Liberais</li>
+                <li>Estados Unidos no século XIX</li>
+                <li>Imperialismo</li>
+                <li>Primeira Guerra Mundial</li>
+                <li>Crise de 1929</li>
+                <li>Totalitarismo</li>
+                <li>Segunda Guerra Mundial</li>
+                <li>Guerra Fria</li>
+                <li>América Latina no século XX</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>Química</strong></p>
+            <ul class="lista_materias">
+                <li>Mudanças de estado físico e diagrama de fases</li>
+                <li>Métodos de separação de misturas</li>
+                <li>Grandezas químicas</li>
+                <li>Estequiometria</li>
+                <li>Gases</li>
+                <li>Densidade</li>
+                <li>Alotropia</li>
+                <li>Distribuição eletrônica e características da Tabela Periódica</li>
+                <li>Propriedades periódicas</li>
+                <li>Ligação iônica</li>
+                <li>Ligação covalente</li>
+                <li>Ligação metálica</li>
+                <li>Ligação intermolecular</li>
+                <li>Funções inorgânicas (ácido)</li>
+                <li>Funções inorgânicas (base)</li>
+                <li>Funções inorgânicas (sais)</li>
+                <li>Funções inorgânicas (óxidos)</li>
+                <li>Reações inorgânicas de síntese e de adição</li>
+                <li>Reações de simples troca e de dupla troca</li>
+                <li>Coeficiente de solubilidade</li>
+                <li>Concentração das soluções</li>
+                <li>Diluição e concentração das soluções</li>
+                <li>Reações químicas em solução</li>
+                <li>Termoquímica</li>
+                <li>Radioatividade</li>
+                <li>Eletrólise</li>
+                <li>Pilhas</li>
+                <li>Cinética química</li>
+                <li>Equilíbrio químico</li>
+                <li>Equilíbrio iônico</li>
+                <li>Hidrólise</li>
+                <li>Produto de solubilidade</li>
+                <li>Solução tampão</li>
+                <li>Equação de Gibbs e espontaneidade</li>
+                <li>Oxidação e redução</li>
+                <li>Propriedades e classificações do carbono</li>
+                <li>Hibridação do carbono e classificação das cadeias carbônicas</li>
+                <li>Hidrocarbonetos</li>
+                <li>Funções oxigenadas</li>
+                <li>Funções nitrogenadas</li>
+                <li>Isomeria plana</li>
+                <li>Isomeria espacial geométrica</li>
+                <li>Isomeria espacial óptica</li>
+                <li>Acidez e basicidade</li>
+                <li>Reações orgânicas</li>
+                <li>Saponificação, detergente e sabão</li>
+                <li>Transesterificação e biodiesel</li>
+                <li>Lixo, lixão, aterro controlado e aterro sanitário</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>Física</strong></p>
+            <ul class="lista_materias">
+                <li>Velocidade média e aceleração média</li>
+                <li>Movimento retilíneo uniforme</li>
+                <li>Movimento retilíneo uniformemente variado</li>
+                <li>Aplicações do MRU e do MRUV</li>
+                <li>Cinemática vetorial</li>
+                <li>Lançamento horizontal</li>
+                <li>Lançamento oblíquo</li>
+                <li>Movimento circular</li>
+                <li>Leis de Newton</li>
+                <li>Força elástica</li>
+                <li>Roldanas e sistema de força</li>
+                <li>Força de atrito</li>
+                <li>Força centrípeta</li>
+                <li>Gravitação</li>
+                <li>Trabalho e potência</li>
+                <li>Energia e sua conservação</li>
+                <li>Impulso e quantidade de movimento</li>
+                <li>Estática dos sólidos</li>
+                <li>Hidrostática</li>
+                <li>Temperatura e calor</li>
+                <li>Dilatação</li>
+                <li>Calor sensível e calor latente</li>
+                <li>Gás ideal e suas transformações</li>
+                <li>1ª Lei da Termodinâmica e 2ª Lei da Termodinâmica</li>
+                <li>Fundamentos da óptica geométrica</li>
+                <li>Reflexão, espelhos planos e espelhos esféricos</li>
+                <li>Refração da luz</li>
+                <li>Lentes esféricas</li>
+                <li>Óptica da visão</li>
+                <li>Fundamentos da ondulatória</li>
+                <li>Ondas em cordas</li>
+                <li>Fenômenos ondulatórios</li>
+                <li>Acústica</li>
+                <li>Tubos sonoros</li>
+                <li>Cordas vibrantes</li>
+                <li>Carga elétrica</li>
+                <li>Força e campo elétrico</li>
+                <li>Potencial elétrico</li>
+                <li>Corrente elétrica</li>
+                <li>1ª Lei de Ohm e 2ª Lei de Ohm</li>
+                <li>Medidores e circuitos elétricos</li>
+                <li>Gerador elétrico</li>
+                <li>Receptor elétrico</li>
+                <li>Circuito com gerador, receptor e resistor</li>
+                <li>Capacitores e ponte de Wheatstone</li>
+                <li>Imã e campo magnético</li>
+                <li>Campo magnético e corrente elétrica</li>
+                <li>Força magnética</li>
+                <li>Indução eletromagnética</li>
+                <li>Aplicações do magnetismo</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>Geografia</strong></p>
+            <ul class="lista_materias">
+                <li>Cartografia</li>
+                <li>Superfícies da Terra</li>
+                <li>Hidrografia</li>
+                <li>Mecanismos do clima e circulação atmosférica</li>
+                <li>Características climáticas do território brasileiro</li>
+                <li>Vegetação e domínios da natureza no mundo</li>
+                <li>Vegetação e domínios da natureza no Brasil</li>
+                <li>Problemas ambientais</li>
+                <li>Política ambiental brasileira</li>
+                <li>Mudanças climáticas</li>
+                <li>Conferências ambientais</li>
+                <li>Fontes de energia</li>
+                <li>Matriz energética</li>
+                <li>Mundialização do capitalismo</li>
+                <li>As grandes instituições financeiras mundiais</li>
+                <li>A formação dos blocos econômicos</li>
+                <li>Organizações mundiais</li>
+                <li>Globalização</li>
+                <li>Nova divisão internacional do trabalho</li>
+                <li>As transformações no Leste Europeu (Guerra Fria e Cortina de Ferro)</li>
+                <li>Nova ordem mundial (China, Rússia e Estados Unidos)</li>
+                <li>Conflitos na Ásia, no Oriente Médio, na África e na América Latina</li>
+                <li>A questão agrária brasileira</li>
+                <li>A industrialização da agricultura e a pecuária no Brasil</li>
+                <li>Processos migratórios</li>
+                <li>Urbanização</li>
+                <li>A questão urbana e os problemas urbanos do Brasil</li>
+                <li>Organização do Estado brasileiro</li>
+                <li>Geografia da saúde</li>
+                <li>Geografia cultural</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>Biologia</strong></p>
+            <ul class="lista_materias">
+                <li>Método científico</li>
+                <li>Origem da vida</li>
+                <li>Água</li>
+                <li>Sais minerais</li>
+                <li>Vitaminas</li>
+                <li>Ácidos nucleicos (RNA e DNA)</li>
+                <li>Duplicação do DNA</li>
+                <li>Transcrição do RNA, tradução, síntese proteica e operon</li>
+                <li>Mutações gênicas</li>
+                <li>Lipídios</li>
+                <li>Carboidratos</li>
+                <li>Proteínas</li>
+                <li>Enzimas</li>
+                <li>Citologia (eucariontes e procariontes)</li>
+                <li>Membrana plasmática e seus transportes</li>
+                <li>Citoplasma e organelas citoplasmáticas</li>
+                <li>Núcleo e cariótipo celular</li>
+                <li>Ciclo de vida celular e divisão celular</li>
+                <li>Erros cromossômicos</li>
+                <li>Bioenergética</li>
+                <li>Fotossíntese</li>
+                <li>Quimiossíntese</li>
+                <li>Respiração celular</li>
+                <li>Fermentação (alcoólica, láctica e acéptica)</li>
+                <li>Reprodução geral dos animais e dos vegetais</li>
+                <li>Anatomia e fisiologia dos sistemas reprodutores masculino e feminino</li>
+                <li>Métodos contraceptivos e infecções sexualmente transmissíveis</li>
+                <li>Embriologia</li>
+                <li>Gestação e ciclo menstrual</li>
+                <li>Tecido epitelial</li>
+                <li>Tecido conjuntivo</li>
+                <li>Tecido sanguíneo</li>
+                <li>Coagulação, imunização, soro, vacina e alergia</li>
+                <li>Tecido muscular</li>
+                <li>Tecido nervoso</li>
+                <li>Ecologia (cadeias alimentares, pirâmides ecológicas e fluxo de energia)</li>
+                <li>Ciclos biogeoquímicos (carbono, nitrogênio, oxigênio, água, enxofre e fósforo)</li>
+                <li>Dinâmica das populações e relações ecológicas</li>
+                <li>Sucessões ecológicas</li>
+                <li>Biomas aquáticos e biomas terrestres</li>
+                <li>Biomas brasileiros</li>
+                <li>Poluição</li>
+                <li>Evolução</li>
+                <li>Especiações e evolução humana</li>
+                <li>Sistema digestório</li>
+                <li>Sistema circulatório</li>
+                <li>Sistema respiratório</li>
+                <li>Sistema excretor</li>
+                <li>Sistema endócrino</li>
+                <li>Sistema nervoso</li>
+                <li>Taxonomia e filogenia</li>
+                <li>Grupos vegetais</li>
+                <li>Morfologia e fisiologia das plantas</li>
+                <li>Genética mendeliana (1ª Lei de Mendel, 2ª Lei de Mendel e heredogramas)</li>
+                <li>Biotecnologia</li>
+                <li>Programa de saúde</li>
+                <li>Agentes patogênicos (vírus, bactérias, protozoários, algas e fungos)</li>
+                <li>Doenças parasitárias do Brasil (viroses, bacterioses e protozooses)</li>
+                <li>Verminoses do Brasil</li>
+                <li>Doenças causadas por platelmintos e nematelmintos</li>
+                <li>Zoologia dos invertebrados</li>
+                <li>Equinodermos e protocordados</li>
+                <li>Cordados vertebrados</li>
+                <li>Aves e mamíferos</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>Sociologia</strong></p>
+            <ul class="lista_materias">
+                <li>Introdução à Sociologia</li>
+                <li>Emile Durkheim</li>
+                <li>Max Weber</li>
+                <li>Karl Marx</li>
+                <li>Indivíduo e sociedade</li>
+                <li>Cultura e sociedade</li>
+                <li>Raça, etnia e multiculturalismo</li>
+                <li>Socialização</li>
+                <li>Controle social</li>
+                <li>Estado, política e poder</li>
+                <li>Democracia, direitos humanos e cidadania</li>
+                <li>Movimentos sociais</li>
+                <li>Sociologia do Brasil</li>
+                <li>Trabalho e sociedade</li>
+                <li>Desigualdade social</li>
+                <li>A sociedade e o espaço urbano</li>
+                <li>Globalização</li>
+                <li>Gênero e sexualidade</li>
+                <li>Violência</li>
+                <li>Sistema prisional</li>
+                <li>Internet e redes sociais</li>
+                <li>Preconceito racial</li>
+                <li>Representatividade e exclusão</li>
+                <li>Biopolítica</li>
+                <li>Necropolítica</li>
+                <li>Sociologia contemporânea</li>
+                <li>Escola de Frankfurt e a indústria cultural</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>Educação Física</strong></p>
+            <ul class="lista_materias">
+                <li>Conceitos básicos de educação física e saúde</li>
+                <li>Importância da atividade física para a saúde</li>
+                <li>Aspectos fisiológicos da prática esportiva</li>
+                <li>Capacidades físicas: resistência, força, flexibilidade, velocidade e coordenação</li>
+                <li>Biomecânica do movimento humano</li>
+                <li>Esportes coletivos: regras, estratégias e benefícios</li>
+                <li>Esportes individuais e suas características</li>
+                <li>Atividades físicas e qualidade de vida</li>
+                <li>Treinamento físico e condicionamento</li>
+                <li>Alongamento e aquecimento</li>
+                <li>Prevenção de lesões e primeiros socorros</li>
+                <li>Alimentação e nutrição relacionadas ao exercício físico</li>
+                <li>Saúde pública e promoção da atividade física</li>
+                <li>História do esporte no Brasil e no mundo</li>
+                <li>Esporte como direito social e inclusão</li>
+                <li>Corpo, cultura e diversidade corporal</li>
+                <li>Violência no esporte e ética esportiva</li>
+                <li>Dopagem e seus impactos</li>
+                <li>Políticas públicas de esporte e lazer</li>
+                <li>Relação entre esporte, lazer e bem-estar</li>
+            </ul>
+            <br>
+            <p class="materia"><strong>Filosofia</strong></p>
+            <ul class="lista_materias">
+                <li>Introdução à filosofia</li>
+                <li>Pré-socráticos</li>
+                <li>Sócrates e os sofistas</li>
+                <li>Platão</li>
+                <li>Aristóteles</li>
+                <li>Filosofia medieval</li>
+                <li>Filosofia helênica</li>
+                <li>Filosofia moderna</li>
+                <li>Filosofia moral</li>
+                <li>Antropologia</li>
+                <li>Ócio e trabalho</li>
+                <li>Filosofia contemporânea</li>
+                <li>Teoria crítica</li>
+                <li>Política</li>
+                <li>Filosofia pós-moderna</li>
+            </ul>
+            <br>
+            <button onclick="go_to_top()" class="topo">↑</button>
+            <br>
+            `;
+        }
+        if (area === 'redacoes') {
+            navAreas.innerHTML = `
+            <ul>
+            <li><strong><button onclick="sel_area('home')">Início</button></strong></li>
+            <li><strong><button onclick="sel_area('materias')">Checklist</button></strong></li>
+            <li><strong><button onclick="sel_area('redacoes')">Treinar Redações</button></strong></li>
+            <li><strong><button onclick="sel_area('simulados')">Simulados</button></strong></li>
+            <li><strong><button onclick="sel_area('extra')">Materiais Extras</button></strong></li>
+            </ul>
+
+            `;
+            mainCont.innerHTML = `
+            <p class="titulo"><strong>Treinar Redações</strong></p>
+            <p>
+                Uma coisa muito importante na preparação para vestibulares se trata do trino de redações. Atualmente há 
+                inúmeros modelos distintos de redações solicitadas em vestibulares, no entanto os mais cobiçados no
+                estado são a UECE e o ENEM que seguem estilos de textos distintos, com estruturas diferentes entre si.
+                São essas estruturas e alguns sites para treino que estarão sendo disponibilizados nessa área.
+            </p>
+            <p class="vestibular_uece"><strong>UECE</strong></p>
+            <div class="cards_uece">
+                <a href="https://aprovatotal.com.br/vestibular-uece/" target="_blank" class="link_card">
+                    <div class="card_uece">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5726/5726624.png" alt="Como Funciona" class="logo">
+                        <p class="nome"><strong>Como Funciona</strong></p>
+                        <p class="descricao">
+                            A primeira coisa que deve ser feito antes de tudo é compreender como funciona
+                            o vestibular da UECE, incluindo datas, fases, modelos de prova, cursos mais 
+                            disputados, assuntos, entre outras informações.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://chatgpt.com/?model=auto" target="_blank" class="link_card">
+                    <div class="card_uece">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/ChatGPT-Logo.svg/512px-ChatGPT-Logo.svg.png" alt="ChatGPT" class="logo">
+                        <p class="nome"><strong>ChatGPT</strong></p>
+                        <p class="descricao">
+                            Embora o ChatGPT seja visto com maus olhos atualmente devido a sua má utilização
+                            ele ainda pode ser usado de maneira eficiente na correção e no treino de redações
+                            de diversos vestibulares, incluindo modelo UECE. Embora sua avaliação nem sempre 
+                            seja totalmente igual a avaliação oficial do vestibular ela é a plataforma digital
+                            gratuita mais segura e mais eficaz encontrada.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://profbrunocarvalho.com.br/blog/172" target="_blank" class="link_card">
+                    <div class="card_uece">
+                        <img src="https://images.vexels.com/content/130100/preview/document-circle-icon-f619f9.png" alt="Texto" class="logo">
+                        <p class="nome"><strong>Gêneros Textuais</strong></p>
+                        <p class="descricao">
+                            Ao pressionar esse card você será redirecionado para um site com todos os
+                            gêneros textuais que podem cair na UECE, os principais são: depoimento, 
+                            artigo de opinião, carta aberta, narração, biografia, crônica, editorial e relato.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <p class="vestibular_enem"><strong>ENEM</strong></p>
+            <div class="cards_enem">
+                <a href="https://www.ead.com.br/blog/o-que-e-enem" target="_blank" class="link_card">
+                    <div class="card_enem">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5726/5726624.png" alt="Ponto de interrogação" class="logo">
+                        <p class="nome"><strong>Como Funciona</strong></p>
+                        <p class="descricao">
+                            A primeira coisa que deve ser feita é entender mais sobre o ENEM, o
+                            que pode levar no dia, como ele pode ajudar a ingressar em uma faculdade
+                            nacional ou internacional, entre outras informações.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://app.glau.com.vc/aluno/inicio" target="_blank" class="link_card">
+                    <div class="card_enem">
+                        <img src="https://app.glau.com.vc/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-192x192.1a71ab0d.png&w=1920&q=75" alt="Glau" class="logo">
+                        <p class="nome"><strong>Glau</strong></p>
+                        <p class="descricao">
+                            O Glau se trata de um site voltado principalmente a ajudar estudantes,
+                            concurseiros e vestibulantes no treino de redações, ele disponibiliza 
+                            suporte para vários modelos de avaliação de redação baseados no ENEM e
+                            em vestibulares como Fuvest, Vunesp, UERJ, entre outras. Com feedbacks
+                            super rápidos, notas sobre a redação e a nota que você poderia ganhar
+                            com ela.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://blog.imaginie.com.br/texto-dissertativo-argumentativo/" target="_blank" class="link_card">
+                    <div class="card_enem">
+                        <img src="https://images.vexels.com/content/130100/preview/document-circle-icon-f619f9.png" alt="Texto" class="logo">
+                        <p class="nome"><strong>Estrutura do Texto</strong></p>
+                        <p class="descricao">
+                            Ao pressionar esse card você será redirecionado para um site com algumas
+                            orientações sobre o modelo de redação dissertativa-argumentativa, incluindo
+                            a estrutura completa do texto.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <p class="vestibular_ita"><strong>ITA</strong></p>
+            <div class="cards_ita">
+                <a href="https://vestibulares.estrategia.com/portal/enem-e-vestibulares/vestibulares/vestibular-ita/" target="_blank" class="link_card">
+                    <div class="card_ita">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5726/5726624.png" alt="Ponto de interrogação" class="logo">
+                        <p class="nome"><strong>Como Funciona</strong></p>
+                        <p class="descricao">
+                            A primeira coisa que deve ser feito antes de tudo é compreender como funciona
+                            o vestibular do ITA, incluindo informações como modelo de prova e redação, cursos
+                            disponíveis e fases da prova.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://chatgpt.com/?model=auto" target="_blank" class="link_card">
+                    <div class="card_ita">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/ChatGPT-Logo.svg/512px-ChatGPT-Logo.svg.png" alt="ChatGPT" class="logo">
+                        <p class="nome"><strong>ChatGPT</strong></p>
+                        <p class="descricao">
+                            O ChatGPT é possivelmente o único meio digital que consegue fornecer uma ajuda decente
+                            de forma gratuita para o treino desse estilo de redação dissertativa-argumentativa do ITA, no 
+                            entanto para adequa-lo ao modelo do vestibular deve-se informar primeiramente os
+                            critérios de avaliação que ele usa e qual a nota máxima definida para as dissertações
+                            (informações no próximo card).
+                        </p>
+                    </div>
+                </a>
+                <a href="https://www.corrijame.com.br/bancas-e-suas-redacoes/como-funciona-a-redacao-do-ita" target="_blank" class="link_card">
+                    <div class="card_ita">
+                        <img src="https://images.vexels.com/content/130100/preview/document-circle-icon-f619f9.png" alt="" class="logo">
+                        <p class="nome"><strong>Modelo de Avaliação</strong></p>
+                        <p class="descricao">
+                            Ao pressionar esse card você será redirecionado para um site com algumas
+                            orientações sobre o modelo de redação e os critérios que o ITA utiliza para
+                            avaliar as redações dos candidatos.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            `;
+        }
+        if (area === 'simulados') {
+            navAreas.innerHTML = `
+            <ul>
+            <li><strong><button onclick="sel_area('home')">Início</button></strong></li>
+            <li><strong><button onclick="sel_area('materias')">Checklist</button></strong></li>
+            <li><strong><button onclick="sel_area('redacoes')">Treinar Redações</button></strong></li>
+            <li><strong><button onclick="sel_area('simulados')">Simulados</button></strong></li>
+            <li><strong><button onclick="sel_area('extra')">Materiais Extras</button></strong></li>
+            </ul>
+
+            `;
+            mainCont.innerHTML = `
+            <p class="titulo"><strong>Simulados</strong></p>
+            <p>
+                Aqui estão alguns simulados gratuitos, sites e provas anteriores para treinar e testar
+                conhecimentos:
+            </p>
+            <p class="vestibular_uece"><strong>UECE</strong></p>
+            <div class="cards_uece">
+                <a href="https://aprovatotal.com.br/vestibular-uece/" target="_blank" class="link_card">
+                    <div class="card_uece">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5726/5726624.png" alt="Ponto de interrogação" class="logo">
+                        <p class="nome"><strong>Como Funciona</strong></p>
+                        <p class="descricao">
+                            A primeira coisa que deve ser feito antes de tudo é compreender como funciona
+                            o vestibular da UECE, incluindo datas, fases, modelos de prova, cursos mais 
+                            disputados, entre outras informações.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://vestibulares.estrategia.com/portal/enem-e-vestibulares/vestibulares/o-que-cai-no-vestibular-da-uece/" target="_blank" class="link_card">
+                    <div class="card_uece">
+                        <img src="https://images.vexels.com/media/users/3/324281/isolated/preview/0f51a9cf991b496b090447c55597eb1f-book-icon-in-green-color.png" alt="Livro aberto" class="logo">
+                        <p class="nome"><strong>Assuntos que Caem</strong></p>
+                        <p class="descricao">
+                            No estudo para o vestibular da UECE, a coisa mais essencial, além da redação,
+                            são os assuntos que normalmente caem na prova, pois assim o aluno poderá se
+                            preparar melhor para ela.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://app.estuda.com/questoes_provas/?inicio=1&instituicao=114" target="_blank" class="link_card">
+                    <div class="card_uece">
+                        <img src="https://apiceconsultoria.com/inscricoes/img/icone-vestibular-01.png" alt="Prova corrigida" class="logo">
+                        <p class="nome"><strong>Simulados</strong></p>
+                        <p class="descricao">
+                            Ao pressionar esse card você será redirecionado(a) para um site com vários
+                            simulados da UECE que utilizam-se das provas anteriores para treino, com
+                            gabarito de cada questão após a resposta.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://servicos.aridesa.com.br/provascomentadas/" target="_blank" class="link_card">
+                    <div class="card_uece">
+                        <img src="https://images.vexels.com/content/130100/preview/document-circle-icon-f619f9.png" alt="Prova" class="logo">
+                        <p class="nome"><strong>Provas Anteriores</strong></p>
+                        <p class="descricao">
+                            Outra coisa que ajuda muito na hora do estudo é revisar algumas provas
+                            anteriores da UECE. Ao pressionar esse card você será redirecionado a um site
+                            onde há correção de todas as provas desde 2008.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <p class="vestibular_enem"><strong>ENEM</strong></p>
+            <div class="cards_enem">
+                <a href="https://www.ead.com.br/blog/o-que-e-enem" target="_blank" class="link_card">
+                    <div class="card_enem">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5726/5726624.png" alt="Ponto de interrogação" class="logo">
+                        <p class="nome"><strong>Como Funciona</strong></p>
+                        <p class="descricao">
+                            A primeira coisa que deve ser feita é entender mais sobre o ENEM, o
+                            que pode levar no dia, como ele pode ajudar a ingressar em uma faculdade
+                            nacional ou internacional, entre outras informações.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://www.todamateria.com.br/assuntos-que-mais-caem-no-enem/" target="_blank" class="link_card">
+                    <div class="card_enem">
+                        <img src="https://images.vexels.com/media/users/3/324281/isolated/preview/0f51a9cf991b496b090447c55597eb1f-book-icon-in-green-color.png" alt="Livro aberto" class="logo">
+                        <p class="nome"><strong>Assuntos que Caem</strong></p>
+                        <p class="descricao">
+                            No estudo para o ENEM, a coisa mais essencial, além do treino da redação,
+                            são os assuntos que normalmente caem na prova, pois assim o aluno poderá
+                            se preparar melhor para ele.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://vestibular.brasilescola.uol.com.br/enem/simulado" target="_blank" class="link_card">
+                    <div class="card_enem">
+                        <img src="https://apiceconsultoria.com/inscricoes/img/icone-vestibular-01.png" alt="Prova corrigida" class="logo">
+                        <p class="nome"><strong>Simulados</strong></p>
+                        <p class="descricao">
+                            Ao pressionar esse card você será redirecionado(a) para um site de
+                            simulado ENEM que possui simulados de cada área de conhecimento,
+                            além de simulados com questões de todas as áreas.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos" target="_blank" class="link_card">
+                    <div class="card_enem">
+                        <img src="https://images.vexels.com/content/130100/preview/document-circle-icon-f619f9.png" alt="Prova" class="logo">
+                        <p class="nome"><strong>Provas Anteriores</strong></p>
+                        <p class="descricao">
+                            Outra coisa que juda muito na hora do estudo é revisar algumas provas
+                            anteriores do ENEM. Ao pressionar esse card você será redirecionado para
+                            um site com todas as provas e gabaritos até hoje.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <p class="vestibular_ita"><strong>ITA</strong></p>
+            <div class="cards_ita">
+                <a href="https://vestibulares.estrategia.com/portal/enem-e-vestibulares/vestibulares/vestibular-ita/" target="_blank" class="link_card">
+                    <div class="card_ita">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5726/5726624.png" alt="Ponto de interrogação" class="logo">
+                        <p class="nome"><strong>Como Funciona</strong></p>
+                        <p class="descricao">
+                            A primeira coisa que deve ser feito antes de tudo é compreender como funciona
+                            o vestibular do ITA, incluindo informações como modelo de prova e redação, cursos
+                            disponíveis e fases da prova.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://beduka.com/blog/dicas/faculdades/o-que-estudar-para-o-ita/" target="_blank" class="link_card">
+                    <div class="card_ita">
+                        <img src="https://images.vexels.com/media/users/3/324281/isolated/preview/0f51a9cf991b496b090447c55597eb1f-book-icon-in-green-color.png" alt="Livro aberto" class="logo">
+                        <p class="nome"><strong>Assuntos que Caem</strong></p>
+                        <p class="descricao">
+                            No estudo para o vestibular da UECE, a coisa mais essencial, além da redação,
+                            são os assuntos que normalmente caem na prova, pois assim o aluno poderá se
+                            preparar melhor para ela.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://cosseno.com/provas-anteriores/ITA" target="_blank" class="link_card">
+                    <div class="card_ita">
+                        <img src="https://apiceconsultoria.com/inscricoes/img/icone-vestibular-01.png" alt="Prova corrigida" class="logo">
+                        <p class="nome"><strong>Simulados</strong></p>
+                        <p class="descricao">
+                            Ao pressionar esse card você será redirecionado(a) para um site com vários
+                            simulados do ITA que utilizam-se das provas anteriores para treino, com
+                            gabarito de cada questão após a resposta.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://vestibular.ita.br/provas.htm" target="_blank" class="link_card">
+                    <div class="card_ita">
+                        <img src="https://images.vexels.com/content/130100/preview/document-circle-icon-f619f9.png" alt="Prova" class="logo">
+                        <p class="nome"><strong>Provas Anteriores</strong></p>
+                        <p class="descricao">
+                            Outra coisa que juda muito na hora do estudo é revisar algumas provas
+                            anteriores do ITA. Ao pressionar esse card você será redirecionado para
+                            um site com provas do ITA desde 2008 até 2024.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            `;
+        }
+        if (area === 'extra') {
+            navAreas.innerHTML = `
+            <ul>
+            <li><strong><button onclick="sel_area('home')">Início</button></strong></li>
+            <li><strong><button onclick="sel_area('materias')">Checklist</button></strong></li>
+            <li><strong><button onclick="sel_area('redacoes')">Treinar Redações</button></strong></li>
+            <li><strong><button onclick="sel_area('simulados')">Simulados</button></strong></li>
+            <li><strong><button onclick="sel_area('extra')">Materiais Extras</button></strong></li>
+            </ul>
+
+            `;
+            mainCont.innerHTML = `
+            <p class="titulo"><strong>Materiais Extras</strong></p>
+            <p>
+                Aqui estão disponibilizados alguns materiais extras úteis que podem auxiliar no estudo. Esta
+                área ainda está incompleta no entanto futuramente mais coisas poderão ser modificadas conforme
+                mais materiais forem sendo disponibilizados.
+            </p>
+            <button class="secret" onclick="sel_area('phrase')">L</button>
+            <div class="cards">
+                <a href="https://projetoagathaedu.com.br/app/index.php" target="_blank" class="link_card">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Y1nz56uuUp5HvgMBwFAfA-rmIUvTloauIg&s" alt="Projeto Agatha" class="logo">
+                    <p class="nome"><strong>Projeto Agatha</strong></p>
+                    <p class="descricao">
+                        O Projeto Agatha se trata de um site educacional
+                        que dispõe de diversos recursos, desde cronogramas de estudo até questões de concursos.
+                    </p>
+                        <button class="acess">Acessar</button>
+                </div>
+                </a>
+                <a href="https://aluno.coredacao.com/" target="_blank" class="link_card">
+                <div class="card">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D0BAQE13bfDExLKew/company-logo_200_200/company-logo_200_200/0/1694016520019/coredao_logo?e=2147483647&v=beta&t=ZmBe_xcack0HLGkm-8KRqJykQVp5sIzaLxyNs82Saq4" alt="coRedação" class="logo">
+                    <p class="nome"><strong>coRedação</strong></p>
+                    <p class="descricao">
+                        coRedação oferece correções instantâneas e gratuitas de redações, com marcação de erros,
+                        sugestões de melhorias e notas por competência.
+                    </p>
+                        <button class="acess">Acessar</button>
+                </div>
+                </a>
+                <a href="https://www.historiadomundo.com.br/" target="_blank" class="link_card">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7qsyktcHC9OYFMQQLocuwabfiLzncCXmpAQ&s" alt="História do Mundo" class="logo">
+                    <p class="nome"><strong>História do Mundo</strong></p>
+                    <p class="descricao">
+                        História do Mundo é um site educativo sobre história, ele possui
+                        os principais eventos históricos já presenciados pela humanidade.
+                    </p>
+                        <button class="acess">Acessar</button>
+                </div>
+                </a>
+                <a href="https://app.estuda.com/usuarios" target="_blank" class="link_card">
+                <div class="card">
+                    <img src="https://s.zst.com.br/prod/cupons/long-term-cached-logos/2023-9-1_21:35:33-19011-Logo-200x200.png" alt="Estuda.com" class="logo">
+                    <p class="nome"><strong>Estuda.com</strong></p>
+                    <p class="descricao">
+                        Estuda.com é um site com diversas questões com resoluções e
+                        vídeos para que o aluno possa se preparar e forma eficaz para vestibulares.
+                    </p>
+                        <button class="acess">Acessar</button>
+                </div>
+                </a>
+                <a href="https://www.studyfetch.com/platform/studyset/67a8a3c366c8eef900422a94" target="_blank" class="link_card">
+                <div class="card">
+                    <img src="https://store-images.s-microsoft.com/image/apps.14069.119987e4-edf3-4a8b-91bb-ce7c3137526c.d6f84194-4ddf-482e-8629-8c4cd602a9e3.ef40887b-634d-40db-8616-387ce74e7158" alt="Study Fetch" class="logo">
+                    <p class="nome"><strong>Study Fetch</strong></p>
+                    <p class="descricao">
+                        StudyFetch oferece ferramentas de aprendizado baseadas em IA, 
+                        como geração de flashcards e quizzes a partir de vídeos ou PDFs.
+                    </p>
+                        <button class="acess">Acessar</button>
+                </div>
+                </a>
+            </div>
+            `;
+        }
+        if (area === 'phrase') {
+            navAreas.innerHTML = `
+            <ul>
+                <li><strong><button onclick="sel_area('home')">← Voltar</button></strong></li>
+            </ul>
+
+            `;
+            mainCont.innerHTML = `
+            <div class="mensagem">
+                <p class="frase">
+                    <strong>🌟 Ei, você que encontrou esse cantinho secreto… 🌟</strong><br>
+                    Antes de qualquer coisa, pare por um momento. Inspire, expire. Agora olhe para trás. Pense em tudo o que já 
+                    superou – as dificuldades, as conquistas, os momentos de dúvida e os de pura felicidade. Cada queda, cada 
+                    recomeço, cada pequeno passo trouxe você até aqui.
+                    Agora, uma nova fase começa. E sim, ela será desafiadora. Vai exigir força, paciência e muita determinação. 
+                    O medo e a incerteza podem aparecer, mas não deixe que eles te controlem. Este é o momento de agir, não de 
+                    recuar!
+                    Deixe as dúvidas para trás. Encare os desafios de frente. Não espere o momento perfeito, porque ele nunca 
+                    vem. O que importa é seguir em frente, mesmo sem todas as respostas. Mesmo que o caminho pareça difícil, 
+                    que os obstáculos pareçam gigantes, seja maior que eles. Dê o seu máximo e tenha orgulho de cada passo que 
+                    der. Se você desistir antes de começar, nunca saberá até onde poderia ter chegado. E acredite, é melhor 
+                    errar tentando do que olhar para trás e se perguntar "e se?".<br>
+                    Então, a partir de agora, seja mais do que talentoso, seja incansável. Obsessão pelo seu futuro, pelos seus 
+                    sonhos, pela pessoa que você quer ser. Se o medo bater, se a dúvida surgir, lembre-se de tudo o que já 
+                    superou. Suas conquistas nunca foram à toa.<br><br>
+                    <strong>Agora é a hora. Vá com tudo. Sem medo. Sem desculpas. Faça do seu futuro o seu agora, afinal
+                    "Seu futuro ainda não foi escrito. O de ninguém foi. Seu futuro é o que você fizer dele."</strong>
+                </p>
+            </div>
+            `;
+        }
+
+
+var checkbox = document.getElementById('toggle_mode');
+
+function applyTheme(isDark) {
+    var areas = document.getElementById('areas');
+    var logo = document.getElementById('logo');
+    var select_serie = document.getElementsByClassName('select_serie');
+
+    if (isDark) {
+        areas.style.backgroundColor = '#2A362B'; 
+        document.body.style.backgroundColor = '#1B1F1D';
+        document.body.style.color = '#D4E9D4'; 
+
+        var buttons = document.querySelectorAll('button');
+        buttons.forEach(function(button) {
+            button.style.backgroundColor = '#2E4A32'; 
+            button.style.color = '#E8F5E9'; 
+            button.style.borderColor = '#6FA86F'; 
+        });
+
+        checkbox.style.backgroundColor = '#2E4A32';
+        checkbox.style.color = '#E8F5E9';
+
+        areas.style.borderColor = '#6FA86F';
+
+        var paragraphs = document.querySelectorAll('p');
+        paragraphs.forEach(function(paragraph) {
+            paragraph.style.color = '#D4E9D4'; 
+        });
+
+        var listItems = document.querySelectorAll('li');
+        listItems.forEach(function(item) {
+            item.style.color = '#D4E9D4';
+        });
+
+        for (var i = 0; i < select_serie.length; i++) {
+            select_serie[i].style.backgroundColor = '#2E4A32';
+            select_serie[i].style.color = '#E8F5E9';
+        }
+
+        var titulo = document.querySelector('.titulo');
+        if (titulo) {
+            titulo.style.color = '#D4E9D4';
+        }
+
+        var vestibularUece = document.querySelectorAll('.vestibular_uece');
+        vestibularUece.forEach(function(title) {
+            title.style.color = 'white'; 
+            title.style.backgroundColor = '#7CA362';
+        });
+        var vestibularEnem = document.querySelectorAll('.vestibular_enem');
+        vestibularEnem.forEach(function(title) {
+            title.style.color = 'white'; 
+            title.style.backgroundColor = '#9A7BAF';
+        });
+        var vestibularIta = document.querySelectorAll('.vestibular_ita');
+        vestibularIta.forEach(function(title) {
+            title.style.color = 'white'; 
+            title.style.backgroundColor = '#6C8FAF';
+        });
+
+        var cardUece = document.querySelectorAll('.card_uece');
+        cardUece.forEach(function(card) {
+            card.style.backgroundColor = '#354837';
+            card.style.color = 'white'; 
+        });
+        var cardEnem = document.querySelectorAll('.card_enem');
+        cardEnem.forEach(function(card) {
+            card.style.backgroundColor = '#3D3242';
+            card.style.color = 'white'; 
+        });
+        var cardIta = document.querySelectorAll('.card_ita');
+        cardIta.forEach(function(card) {
+            card.style.backgroundColor = '#34444C'; 
+            card.style.color = 'white'; 
+        });
+
+        var descriptions = document.querySelectorAll('.descricao');
+        descriptions.forEach(function(description) {
+            description.style.color = '#D4E9D4';
+        });
+
+        var materiaisTitulo = document.querySelector('.titulo'); 
+        if (materiaisTitulo) {
+            materiaisTitulo.style.color = '#D4E9D4'; 
+        }
+
+        var cardsExtras = document.querySelectorAll('.card');
+        cardsExtras.forEach(function(card) {
+            card.style.backgroundColor = '#2E2F2E'; 
+            card.style.color = 'white'; 
+        });
+
+        var acessButtons = document.querySelectorAll('.acess');
+        acessButtons.forEach(function(button) {
+            button.style.backgroundColor = '#3A3D3A'; 
+            button.style.color = '#E8F5E9'; 
+            button.style.borderColor = '#6FA86F'; 
+        });
+
+        var links = document.querySelectorAll('a');
+        links.forEach(function(link) {
+            link.style.color = '#A8D5BA'; 
+        });
+
+        var cardsUece = document.querySelectorAll('.cards_uece');
+        cardsUece.forEach(function(card) {
+            card.style.backgroundColor = '#25392C'; 
+        });
+
+        var cardsEnem = document.querySelectorAll('.cards_enem');
+        cardsEnem.forEach(function(card) {
+            card.style.backgroundColor = '#32263A'; 
+        });
+
+        var cardsIta = document.querySelectorAll('.cards_ita');
+        cardsIta.forEach(function(card) {
+            card.style.backgroundColor = '#24333C'; 
+        });
+
+        logo.src = "https://i.pinimg.com/736x/74/34/b1/7434b124580bc55a4c9382add6b08cd8.jpg";
+    } else {
+        areas.style.backgroundColor = '';
+        document.body.style.backgroundColor = ''; 
+        document.body.style.color = '';
+
+        var buttons = document.querySelectorAll('button');
+        buttons.forEach(function(button) {
+            button.style.backgroundColor = ''; 
+            button.style.color = ''; 
+            button.style.borderColor = ''; 
+        });
+
+
+        checkbox.style.backgroundColor = '';
+        checkbox.style.color = '';
+
+ 
+        areas.style.borderColor = '';
+
+ 
+        var paragraphs = document.querySelectorAll('p');
+        paragraphs.forEach(function(paragraph) {
+            paragraph.style.color = '';
+        });
+
+        var listItems = document.querySelectorAll('li');
+        listItems.forEach(function(item) {
+            item.style.color = '';
+        });
+
+        for (var i = 0; i < select_serie.length; i++) {
+            select_serie[i].style.backgroundColor = ''; 
+            select_serie[i].style.color = '';
+        }
+
+        var titulo = document.querySelector('.titulo');
+        if (titulo) {
+            titulo.style.color = ''; 
+        }
+
+        var vestibularTitles = document.querySelectorAll('.vestibular_uece, .vestibular_enem, .vestibular_ita');
+        vestibularTitles.forEach(function(title) {
+            title.style.color = ''; 
+        });
+
+        var cards = document.querySelectorAll('.card_uece, .card_enem, .card_ita');
+        cards.forEach(function(card) {
+            card.style.backgroundColor = ''; 
+            card.style.color = ''; 
+        });
+
+        var descriptions = document.querySelectorAll('.descricao');
+        descriptions.forEach(function(description) {
+            description.style.color = ''; 
+        });
+
+
+        var materiaisTitulo = document.querySelector('.titulo');
+        if (materiaisTitulo) {
+            materiaisTitulo.style.color = ''; 
+        }
+
+        var cardsExtras = document.querySelectorAll('.card');
+        cardsExtras.forEach(function(card) {
+            card.style.backgroundColor = ''; 
+            card.style.color = ''; 
+        });
+
+        var acessButtons = document.querySelectorAll('.acess');
+        acessButtons.forEach(function(button) {
+            button.style.backgroundColor = ''; 
+            button.style.color = ''; 
+            button.style.borderColor = ''; 
+        });
+
+        var links = document.querySelectorAll(' a');
+        links.forEach(function(link) {
+            link.style.color = ''; 
+        });
+
+
+        var cardsUece = document.querySelectorAll('.cards_uece');
+        cardsUece.forEach(function(card) {
+            card.style.backgroundColor = '';
+        });
+
+        var cardsEnem = document.querySelectorAll('.cards_enem');
+        cardsEnem.forEach(function(card) {
+            card.style.backgroundColor = ''; 
+        });
+
+        var cardsIta = document.querySelectorAll('.cards_ita');
+        cardsIta.forEach(function(card) {
+            card.style.backgroundColor = ''; 
+        });
+
+
+        logo.src = "https://i.pinimg.com/736x/74/34/b1/7434b124580bc55a4c9382add6b08cd8.jpg";
+    }
+
+
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                applyTheme(checkbox.checked); 
+            }
+        });
+    });
+
+    var config = { childList: true, subtree: true };
+    observer.observe(document.body, config);
+}
+
+checkbox.addEventListener('change', function() {
+    applyTheme(this.checked);
+});
+
+applyTheme(checkbox.checked);
+}
+</script>
+</html>
