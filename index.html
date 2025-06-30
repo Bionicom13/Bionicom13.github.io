@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://i.pinimg.com/736x/74/34/b1/7434b124580bc55a4c9382add6b08cd8.jpg">
-    <title>Study</title>
+    <title>Study 1.5</title>
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
@@ -103,15 +103,6 @@ img {
     display: flex;
     width: 40%;
     height: 40%;
-}
-.serie {
-    font-size: 2rem;
-    background-color: #3D3242;
-    color: #fff;
-    border-color: #fff;
-    width: 25%;
-    border-radius: 0.4rem;
-    text-align: center;
 }
 .materia {
     font-size: 1.5rem;
@@ -248,14 +239,32 @@ img {
     text-align: left;
 }
 .frase {
-    font-family: 'fantasy';
     font-size: 1rem;
+    margin-top: 20px;
 }
 .mensagem {
     position: absolute;
     left: 30px;
     right: 30px;
-    text-align: center;
+    margin-top: 60px;
+    height: 75%;
+    background-color: #fff;
+    color: #003d8b;
+}
+@media (min-width: 900px) { 
+    .frase {
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+    .mensagem {
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        margin-top: 60px;
+        height: 40%;
+        background-color: #fff;
+        color: #003d8b;
+    }
 }
     </style>
 </head>
@@ -305,13 +314,11 @@ img {
             mainCont.innerHTML = `
             <p class="titulo"><strong>Início</strong></p>
             <p>
-                Olá! Bem vindo(a) ao Study-prototype, uma versão incompleta do projeto Study iniciado em 2023 com o objetivo
-                de auxiliar estudantes no estudo de diversas matérias. Clique em alguma das áreas acima para acessar uma das
-                áreas.
+                Olá! Bem vindo(a) ao Study 1.5, uma versão alternativa do Study voltado a ENEM e vestibulares especificamente.<br>
+                Aqui você encontrará um checklist de matérias, uma área para treinar redações, simulados e materiais extras que são 
+                muito úteis para estudo.
             </p>
-            <a href="https://drive.google.com/file/d/1-lmvWmsODolrqOgAO1zTPRdWs9Ioisxd/view" target="_blank">
-                <button class="secret">M</button>
-            </a>
+                <button onclick="sel_area('carta')">T</button>
             <img id="logo" src="https://i.pinimg.com/736x/74/34/b1/7434b124580bc55a4c9382add6b08cd8.jpg" alt="logo do projeto study">
             `;
         }
@@ -329,18 +336,20 @@ img {
             mainCont.innerHTML = `
             <p class="titulo"><strong>Checklist</strong></p>
             <p>
-                Aqui estão as séries com as matérias estudadas e os assuntos normalmente vistos em cada durante o período do
-                ensino médio:
+                Aqui está uma checklist de matérias que são comumente cobradas em vestibulares e no ENEM:
             </p>
-            <h2 class="serie"><strong>ENEM</strong></h2>
             <p class="materia"><strong>Inglês</strong></p>
             <ul class="lista_materias">
                 <li>Interpretação de Texto</li>
+                <li>Domínio Lexical</li>
+                <li>Identificação da Função do Texto</li>
             </ul>
             <br>
             <p class="materia"><strong>Espanhol</strong></p>
             <ul class="lista_materias">
                 <li>Interpretação de Texto</li>
+                <li>Domínio Lexical</li>
+                <li>Identificação da Função do Texto</li>
             </ul>
             <br>
             <p class="materia"><strong>Português</strong></p>
@@ -368,7 +377,7 @@ img {
             <ul class="lista_materias">
                 <li>Tenentismo</li>
                 <li>Barroco</li>
-                <li>Realismo / Naturalismo</li>
+                <li>Realismo/Naturalismo</li>
                 <li>Modernismo</li>
                 <li>Literatura contemporânea</li>
             </ul>
@@ -683,26 +692,16 @@ img {
             <br>
             <p class="materia"><strong>Educação Física</strong></p>
             <ul class="lista_materias">
-                <li>Conceitos básicos de educação física e saúde</li>
-                <li>Importância da atividade física para a saúde</li>
-                <li>Aspectos fisiológicos da prática esportiva</li>
-                <li>Capacidades físicas: resistência, força, flexibilidade, velocidade e coordenação</li>
-                <li>Biomecânica do movimento humano</li>
-                <li>Esportes coletivos: regras, estratégias e benefícios</li>
-                <li>Esportes individuais e suas características</li>
-                <li>Atividades físicas e qualidade de vida</li>
-                <li>Treinamento físico e condicionamento</li>
-                <li>Alongamento e aquecimento</li>
-                <li>Prevenção de lesões e primeiros socorros</li>
-                <li>Alimentação e nutrição relacionadas ao exercício físico</li>
-                <li>Saúde pública e promoção da atividade física</li>
-                <li>História do esporte no Brasil e no mundo</li>
-                <li>Esporte como direito social e inclusão</li>
-                <li>Corpo, cultura e diversidade corporal</li>
-                <li>Violência no esporte e ética esportiva</li>
-                <li>Dopagem e seus impactos</li>
-                <li>Políticas públicas de esporte e lazer</li>
-                <li>Relação entre esporte, lazer e bem-estar</li>
+                <li>Atividade Física e Exercício Físico</li>
+                <li>Sedentarismo e suas Consequências</li>
+                <li>Valências Físicas (Força, Resistência, Flexibilidade, Agilidade, Velocidade)</li>
+                <li>Classificação dos Esportes (Coletivos, Individuais)</li>
+                <li>Manifestações Culturais Corporais (Dança, Ginástica, Luta, Lazer, Esportes de Aventura)</li>
+                <li>Doping</li>
+                <li>Lesões e Prevenção</li>
+                <li>Influência da Mídia e dos Padrões Estéticos no Esporte</li>
+                <li>Inclusão e Diversidade no Esporte</li>
+                <li>Políticas Públicas de Esporte e Lazer</li>
             </ul>
             <br>
             <p class="materia"><strong>Filosofia</strong></p>
@@ -1038,11 +1037,10 @@ img {
             mainCont.innerHTML = `
             <p class="titulo"><strong>Materiais Extras</strong></p>
             <p>
-                Aqui estão disponibilizados alguns materiais extras úteis que podem auxiliar no estudo. Esta
-                área ainda está incompleta no entanto futuramente mais coisas poderão ser modificadas conforme
-                mais materiais forem sendo disponibilizados.
+                Aqui estão disponibilizados alguns materiais extras úteis que podem auxiliar no estudo e na organização
+                do aluno, como sites de correção de redações, sites de cronogramas de estudo, sites de questões e muito mais:
             </p>
-            <button class="secret" onclick="sel_area('phrase')">L</button>
+            <button onclick="sel_area('phrase')">L</button>
             <div class="cards">
                 <a href="https://projetoagathaedu.com.br/app/index.php" target="_blank" class="link_card">
                 <div class="card">
@@ -1077,6 +1075,17 @@ img {
                         <button class="acess">Acessar</button>
                 </div>
                 </a>
+                <a href="https://matematiques.com.br/" target="_blank" class="link_card">
+                <div class="card">
+                    <img src="https://matematiques.com.br/wp-content/uploads/2024/07/matematiques-logo.webp" alt="Matematiquês" class="logo">
+                    <p class="nome"><strong>Matematiquês</strong></p>
+                    <p class="descricao">
+                        Matematiquês é um site educativo sobre matemática, ele possui
+                        os principais assuntos de matemática voltados a vestibulares e ENEM.
+                    </p>
+                        <button class="acess">Acessar</button>
+                </div>
+                </a>
                 <a href="https://app.estuda.com/usuarios" target="_blank" class="link_card">
                 <div class="card">
                     <img src="https://s.zst.com.br/prod/cupons/long-term-cached-logos/2023-9-1_21:35:33-19011-Logo-200x200.png" alt="Estuda.com" class="logo">
@@ -1084,6 +1093,17 @@ img {
                     <p class="descricao">
                         Estuda.com é um site com diversas questões com resoluções e
                         vídeos para que o aluno possa se preparar e forma eficaz para vestibulares.
+                    </p>
+                        <button class="acess">Acessar</button>
+                </div>
+                </a>
+                <a href="https://quizenem.com/simulado-por-area/" target="_blank" class="link_card">
+                <div class="card">
+                    <img src="https://cdn.teuquiz.com/enem/quiz-enem-quadrado.jpg" alt="Quiz ENEM" class="logo">
+                    <p class="nome"><strong>Quiz ENEM</strong></p>
+                    <p class="descricao">
+                        Quiz ENEM é um site com diversas questões do ENEM para simulados e treinos,
+                        desde provas completas até questões separadas por área de conhecimento.
                     </p>
                         <button class="acess">Acessar</button>
                 </div>
@@ -1129,6 +1149,36 @@ img {
                     superou. Suas conquistas nunca foram à toa.<br><br>
                     <strong>Agora é a hora. Vá com tudo. Sem medo. Sem desculpas. Faça do seu futuro o seu agora, afinal
                     "Seu futuro ainda não foi escrito. O de ninguém foi. Seu futuro é o que você fizer dele."</strong>
+                </p>
+            </div>
+            `;
+        }
+        if (area === 'carta') {
+            navAreas.innerHTML = `
+            <ul>
+                <li><strong><button onclick="sel_area('home')">← Voltar</button></strong></li>
+            </ul>
+
+            `;
+            mainCont.innerHTML = `
+            <div class="mensagem">
+                <p class="frase">
+                    <strong>Oi, gente. Se vocês chegaram até esse cantinho, saibam que isso me deixa feliz demais. Essa é uma carta aberta
+                    pra vocês, minhas primeiras amigas.</strong><br><br>
+                    Eu gosto muito de vocês. E isso, pra mim, não é pouco. É algo que a minha memória guardará com carinho por 
+                    anos. Cada uma tem um lugar guardado em mim — e não é só por gentileza. Eu nem sei explicar direito o porquê 
+                    de escrever isso. Talvez seja a mistura de gratidão com aquela vontade de mostrar o quanto vocês são 
+                    importantes pra mim.<br>
+                    Admiro muito vocês. O jeito que sorriem, que lidam com a vida, até os jeitinhos confusos que às vezes me 
+                    fazem rir… tudo isso me inspira e me dá vontade de ser alguém melhor, só pra poder estar com vocês de verdade.
+                    Tiveram muitas vezes em que dias ruins ficaram bons só por causa de uma conversa ou um jogo bobo com vocês. 
+                    Mesmo que a gente não seja muito normal (kkk), com vocês eu sempre senti um lugar seguro. Um espaço onde 
+                    posso ser eu mesmo, sem medo ou vergonha.<br>
+                    De coração, espero que um dia vocês realizem todos os seus sonhos e tenham ótimas vidas. Mas também espero que,
+                    algum dia, sintam o mesmo orgulho de serem minhas amigas que eu sinto por ser amigo de vocês. 
+                    Não precisa ser agora. Mas se esse sentimento aparecer um dia… deixem ele ficar. Porque vocês já moram aqui 
+                    dentro de mim faz tempo.<br><br>
+                    <strong>Com carinho (e um pouco de timidez kk), Seu amigo.</strong>
                 </p>
             </div>
             `;
