@@ -318,7 +318,6 @@ img {
                 Aqui você encontrará um checklist de matérias, uma área para treinar redações, simulados e materiais extras que são 
                 muito úteis para estudo.
             </p>
-                <button onclick="sel_area('carta')">T</button>
             <img id="logo" src="https://i.pinimg.com/736x/74/34/b1/7434b124580bc55a4c9382add6b08cd8.jpg" alt="logo do projeto study">
             `;
         }
@@ -1153,37 +1152,6 @@ img {
             </div>
             `;
         }
-        if (area === 'carta') {
-            navAreas.innerHTML = `
-            <ul>
-                <li><strong><button onclick="sel_area('home')">← Voltar</button></strong></li>
-            </ul>
-
-            `;
-            mainCont.innerHTML = `
-            <div class="mensagem">
-                <p class="frase">
-                    <strong>Oi, gente. Se vocês chegaram até esse cantinho, saibam que isso me deixa feliz demais. Essa é uma carta aberta
-                    pra vocês, minhas primeiras amigas.</strong><br><br>
-                    Eu gosto muito de vocês. E isso, pra mim, não é pouco. É algo que a minha memória guardará com carinho por 
-                    anos. Cada uma tem um lugar guardado em mim — e não é só por gentileza. Eu nem sei explicar direito o porquê 
-                    de escrever isso. Talvez seja a mistura de gratidão com aquela vontade de mostrar o quanto vocês são 
-                    importantes pra mim.<br>
-                    Admiro muito vocês. O jeito que sorriem, que lidam com a vida, até os jeitinhos confusos que às vezes me 
-                    fazem rir… tudo isso me inspira e me dá vontade de ser alguém melhor, só pra poder estar com vocês de verdade.
-                    Tiveram muitas vezes em que dias ruins ficaram bons só por causa de uma conversa ou um jogo bobo com vocês. 
-                    Mesmo que a gente não seja muito normal (kkk), com vocês eu sempre senti um lugar seguro. Um espaço onde 
-                    posso ser eu mesmo, sem medo ou vergonha.<br>
-                    De coração, espero que um dia vocês realizem todos os seus sonhos e tenham ótimas vidas. Mas também espero que,
-                    algum dia, sintam o mesmo orgulho de serem minhas amigas que eu sinto por ser amigo de vocês. 
-                    Não precisa ser agora. Mas se esse sentimento aparecer um dia… deixem ele ficar. Porque vocês já moram aqui 
-                    dentro de mim faz tempo.<br><br>
-                    <strong>Com carinho (e um pouco de timidez kk), Seu amigo.</strong>
-                </p>
-            </div>
-            `;
-        }
-
 
 var checkbox = document.getElementById('toggle_mode');
 
